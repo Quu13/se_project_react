@@ -1,0 +1,13 @@
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 85px 0 0 0;
+  }
+  
+  .footer__developer-text {
+    margin: 0 0 0 auto;
+  }
+  
+  .footer__year-text {
+    margin: 0;
+  }
