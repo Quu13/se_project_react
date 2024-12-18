@@ -1,0 +1,40 @@
+.modal__container_type_image {
+    position: relative;
+    max-width: 498px;
+    height: 610px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  
+  .modal__image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .modal__footer {
+    margin: 0;
+    padding: 20px 0 32px 32px;
+  }
+  
+  .modal__caption {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .modal__weather {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #000;
+    margin: 12px 0 0;
+    padding: 0;
+  }

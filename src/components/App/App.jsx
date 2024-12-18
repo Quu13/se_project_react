@@ -74,28 +74,49 @@ function App() {
           </label>
           <fieldset className="modal__radio-buttons">
            <legend className="modal__legend">Select the weather type:</legend> 
-           <label htmlFor="hot" className="modal__label modal__label_type_radio">
-            <input 
-              id="cold" 
+           <div className="modal__radio-button">
+            <input
               type="radio"
-              className="modal__radio-input" 
-              />Hot
-           </label>
-           <label htmlFor="warm" className="modal__label modal__label_type_radio">
-            <input 
-              id="cold" 
-              type="radio" 
-              className="modal__radio-input" 
-              />Warm
-           </label>
-           <label htmlFor="cold" className="modal__label modal__label_type_radio">
-            <input 
-              id="cold" 
-              type="radio" 
-              className="modal__radio-input" 
-              />Cold
-           </label>
-          </fieldset>
+              className="modal__radio-input"
+              id="hot"
+              name="options"
+            />
+            <label
+              htmlFor="hot"
+              className="modal__label modal__label_type_radio"
+            >
+              Hot
+            </label>
+          </div>
+          <div className="modal__radio-button">
+            <input
+              type="radio"
+              className="modal__radio-input"
+              id="warm"
+              name="options"
+            />
+            <label
+              htmlFor="warm"
+              className="modal__label modal__label_type_radio"
+            >
+              Warm
+            </label>
+          </div>
+          <div className="modal__radio-button">
+            <input
+              type="radio"
+              className="modal__radio-input"
+              id="cold"
+              name="options"
+            />
+            <label
+              htmlFor="cold"
+              className="modal__label modal__label_type_radio"
+            >
+              Cold
+            </label>
+          </div>
+        </fieldset>
      </ModalWithForm>
      <ItemModal 
      activeModal={activeModal} 
