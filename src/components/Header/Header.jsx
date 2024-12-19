@@ -6,6 +6,7 @@ function Header({ handleAddClick, weatherData }) {
   const currentDate = new Date().toLocaleString('default', 
     { month: 'long', 
       day: 'numeric' });
+      
     return ( 
     <header className="header">
         <img className="header__logo" src={logo}  />

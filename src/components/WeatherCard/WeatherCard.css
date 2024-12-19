@@ -1,4 +1,4 @@
-.weather-card{
+.weather__card{
   position: relative;
   display: flex;
   height: 80px;
@@ -6,17 +6,19 @@
   overflow: hidden;
 }
 
-.weather-card__temp {
-    font-size: 36px;
-    line-height: 40px;
-    margin: 0;
-    position: absolute;
-    top: 20px;
-    left: 16px;
+.weather__card-temp {
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  position: absolute;
+  top: 20px;
+  left: 16px;
+  margin: 0;
 }
 
-.weather-card__image {
+.weather__card-image {
   object-fit: cover;
   object-position: right top;
   width: 100%;
+  border-radius: 12px;
 }

@@ -1,11 +1,15 @@
 .footer__content {
-    display: flex;
-    justify-content: space-between;
-    padding: 85px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  padding-top: 85px;
   }
   
   .footer__developer-text {
-    margin: 0 0 0 auto;
+    margin: 0;
   }
   
   .footer__year-text {
