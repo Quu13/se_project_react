@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
   transition: visibility 0.3s linear 0s, opacity 0.3s linear;
   opacity: 1;
