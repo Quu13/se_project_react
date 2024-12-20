@@ -7,57 +7,57 @@ export const weatherOptions = [
   {
     day: true,
     condition: "cloudy",
-    url: new URL("../assests/day/cloudy.png", import.meta.url).href,
+    url: new URL("../assets/day/cloudy.png", import.meta.url).href,
   },
   {
     day: true,
     condition: "fog",
-    url: new URL("../assests/day/fog.png", import.meta.url).href,
+    url: new URL("../assets/day/fog.png", import.meta.url).href,
   },
   {
     day: true,
     condition: "rain",
-    url: new URL("../assests/day/rain.png", import.meta.url).href,
+    url: new URL("../assets/day/rain.png", import.meta.url).href,
   },
   {
     day: true,
     condition: "snow",
-    url: new URL("../assests/day/snow.png", import.meta.url).href,
+    url: new URL("../assets/day/snow.png", import.meta.url).href,
   },
   {
     day: true,
     condition: "storm",
-    url: new URL("../assests/day/storm.png", import.meta.url).href,
+    url: new URL("../assets/day/storm.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "clearNight",
-    url: new URL("../assests/night/clearNight.png", import.meta.url).href,
+    url: new URL("../assets/night/clearNight.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "cloudyNight",
-    url: new URL("../assests/night/cloudyNight.png", import.meta.url).href,
+    url: new URL("../assets/night/cloudyNight.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "fog",
-    url: new URL("../assests/night/fogNight.png", import.meta.url).href,
+    url: new URL("../assets/night/fogNight.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "rain",
-    url: new URL("../assests/night/rainNight.png", import.meta.url).href,
+    url: new URL("../assets/night/rainNight.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "snow",
-    url: new URL("../assests/night/snowNight.png", import.meta.url).href,
+    url: new URL("../assets/night/snowNight.png", import.meta.url).href,
   },
   {
     day: false,
     condition: "storm",
-    url: new URL("../assests/night/stormNight.png", import.meta.url).href,
+    url: new URL("../assets/night/stormNight.png", import.meta.url).href,
   },
 ];
 
@@ -105,7 +105,7 @@ export const defaultClothingItems = [
       url: new URL("../assets/day/clear.png", import.meta.url).href,
     },
     night: {
-      url: new URL("../assests/night/clearNight.png", import.meta.url).href,
+      url: new URL("../assets/night/clearNight.png", import.meta.url).href,
     },
   };
 

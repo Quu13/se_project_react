@@ -3,8 +3,14 @@ background-color: #f3f3f3;
 }
 
 .page__content{
-  max-width: 1360px;
+  box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 32px 40px 24px;
+  width: 100%;
+  max-width: 1440px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+

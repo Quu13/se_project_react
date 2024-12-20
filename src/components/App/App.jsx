@@ -54,7 +54,7 @@ function App() {
        activeModal={activeModal}
        onClose={closeActiveModal}
        >
-      <label htmlFor="name" className="modal__label">
+      <label htmlFor="name" className="modal__label modal__label-input">
             Name{ " " } 
             <input 
             type="text" 
@@ -63,7 +63,7 @@ function App() {
             placeholder="Name"
             />
           </label>
-          <label htmlFor="imageUrl" className="modal__label">
+          <label htmlFor="imageUrl" className="modal__label modal__label-input">
             Image{ " " } 
             <input 
             type="url" 

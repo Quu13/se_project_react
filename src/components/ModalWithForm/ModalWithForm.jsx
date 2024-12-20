@@ -21,7 +21,7 @@ function ModalWithForm({
           <button type="submit" className="modal__submit">
             {buttonText}
           </button>
-        </form>;
+        </form>
       </div>
     </div>
     );
