@@ -1,13 +1,14 @@
 .switch{
     display: flex;
     position: relative;
+    margin-left: 740px;
 }
 
 .switch__box{
    border-radius: 25px;
    border: 2px solid black;
-   width: 50px;
-   height: 30px;
+   width: 56px;
+   height: 28px;
    appearance: none; 
 }
 
@@ -15,15 +16,16 @@
     border-radius: 20px;
     width: 30px;
     height: 30px;
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #fff;
     text-align: center;
     cursor: pointer;
     position: absolute;
 }
 
 .switch__slider-F{
-   left: 0;
+   left: 27px;
+   transition: all 0.5s ease;
 }
 
 .switch__slider-C{

@@ -13,11 +13,17 @@ export const getWeather = ({ latitude, longitude }, APIkey ) => {
 
 export const filterWeatherData = (data) => {
  const result = {};
+ const mainTempF = data.main.temp;
+ result.temp = {
+  F: Math.round(mainTempF),
+  C: Math.round(((data.main.temp - 32) * 5) /9)
+ }
  result.city = data.name;
  result.temp = {F: data.main.temp };
  result.type = getWeatherType(result.temp.F);
  result.condition = data.weather[0].main.toLowerCase();
  result.isDay = isDay(data.sys, Date.now());
+ console.log(result);
  return result; 
 };
 
@@ -34,3 +40,5 @@ const getWeatherType = (temperature) => {
       return "cold";
     }
   };
+
+
