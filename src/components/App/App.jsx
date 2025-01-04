@@ -35,7 +35,8 @@ function App() {
   };
 
   const handleToggleSwitchChange =() =>{
-
+    if ( currentTempatureUnit === 'C')setCurrentTemperatureUnit('F')
+    if ( currentTempatureUnit === 'F')setCurrentTemperatureUnit('C')  
   }
 
   useEffect(() => {
@@ -47,6 +48,7 @@ function App() {
       .catch(console.error);
   }, []);
 
+  console.log(currentTemperatureUnit)
   return (
     <div className="page">
        <CurrentTemperatureUnitContext.Provider value={{currentTemperatureUnit, handleToggleSwitchChange}}>
