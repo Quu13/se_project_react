@@ -5,6 +5,7 @@ import Header from "../Header/Header";
 import Main from "../Main/Main";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
+import Profile from "../Profile/Profile";
 import { coordinates, APIkey } from "../../utils/constants";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import Footer from "../Footer/Footer";
@@ -22,6 +23,7 @@ function App() {
   /*MODAL*/
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
+  const [clothingItems, setClothingItems] = useState([]);
 
   const handleCardClick = (card) => {
     setActiveModal("preview");
@@ -52,6 +54,10 @@ function App() {
     if (currentTemperatureUnit === 'F')setCurrentTemperatureUnit('C')  
   }
 
+  const handleOpenDelete = () => {
+    setActiveModal("confirm");
+  };
+
   useEffect(() => {
     getWeather(coordinates, APIkey)
       .then((data) => {
@@ -62,16 +68,29 @@ function App() {
   }, []);
 
   console.log(currentTemperatureUnit)
+  
   return (
     <div className="page">
        <CurrentTemperatureUnitContext.Provider value={{currentTemperatureUnit, handleToggleSwitchChange}}>
       <div className="page__content">
         <Header handleAddClick={handleAddClick} weatherData={weatherData} />
+
+
         <Routes>
-          <Route path="/" element={<Main weatherData={weatherData} handleCardClick={handleCardClick} /> 
+          <Route 
+          path="/" 
+          element={
+          <Main weatherData={weatherData}
+           handleCardClick={handleCardClick}
+           clothingItems={clothingItems} /> 
         } 
       />
-          <Route path="/profile" element={<p>PROFILE</p> } />
+          <Route 
+          path="/profile" 
+          element=
+          {<Profile  
+          handleCardClick={handleCardClick}
+          clothingItems={clothingItems}/> } />
         </Routes>
         
         <Footer />
@@ -84,6 +103,7 @@ function App() {
         activeModal={activeModal}
         card={selectedCard}
         onClose={closeActiveModal}
+        onOpenDelete={handleOpenDelete}
       />
       </CurrentTemperatureUnitContext.Provider>
     </div>

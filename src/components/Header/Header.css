@@ -27,8 +27,7 @@
    font-size: 20px;
    line-height: 24px;
    font-weight: 700;
-   margin-left: auto;
-   padding: 0 20px 0 0;
+   padding: 0 20px 0 20px;
    font-family: "CabinetGrotesk-Medium", Arial, sans-serif;
  }
 
@@ -41,4 +40,9 @@
 .header__username{
    margin: 0;
    padding-right: 12px;
+}
+
+.header__link {
+   text-decoration: none;
+   color: black
 }

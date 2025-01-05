@@ -32,10 +32,6 @@
   left: 25px;  
 }
 
-.switch__active {
-  color: white;
-  font-size: 16px;
-}
 
 .switch__temp {
   font-size: 16px; 
@@ -44,7 +40,14 @@
   display: flex;
   align-items: center;
   height: 100%;
+  color: #7E7E7E;
 }
+
+.switch__active {
+  color: white;
+  font-size: 16px;
+}
+
 
 .switch__temp-C {
   left: 34px;
