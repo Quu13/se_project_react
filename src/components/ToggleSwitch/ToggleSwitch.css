@@ -1,7 +1,7 @@
 .switch{
     display: flex;
     position: relative;
-    margin-left: 740px;
+    margin-left: auto;
 }
 
 .switch__box{
