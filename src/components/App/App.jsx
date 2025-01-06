@@ -41,23 +41,27 @@ function App() {
 
   const handleAddItemSubmit = ({ name, imageUrl, weather }) => {
     addItem({ name, imageUrl, weather })
-      .then((res) => {
-        setClothingItems((prevItems) => {
-          return [res, ...prevItems];
-        });
-        closeActiveModal();
+      .then((values) => {
+        setClothingItems([values, ...clothingItems]);
+        closeModal();
       })
-      .catch(console.error);
+      .catch((err) => console.log(err));
   };
+
+  const handleOpenDelete = (cardId) => {
+    deleteCard(cardId)
+      .then(() => {
+        setClothingItems(clothingItems.filter((item) => item._id !== id));
+        closeModal();
+      })
+      .catch((error) => console.log(error));
+  };
+
 
   const handleToggleSwitchChange =() =>{
     if (currentTemperatureUnit === 'C')setCurrentTemperatureUnit('F')
     if (currentTemperatureUnit === 'F')setCurrentTemperatureUnit('C')  
   }
-
-  const handleOpenDelete = () => {
-    setActiveModal("confirm");
-  };
 
   useEffect(() => {
     getWeather(coordinates, APIkey)
@@ -74,7 +78,6 @@ function App() {
     getItems()
       .then((data) => {
         console.log(data);
-        // set the clothing items
         setClothingItems(data);
       })
       .catch(console.error);

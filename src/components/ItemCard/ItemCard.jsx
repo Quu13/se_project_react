@@ -14,7 +14,7 @@ const handleCardClick = () => {
         <img 
         onClick={handleCardClick} 
         className="card__image" 
-        src={item.link} 
+        src={item.imageUrl} 
         alt={item.name} />
       </li>
     );
