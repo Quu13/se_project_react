@@ -11,6 +11,7 @@ import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import Footer from "../Footer/Footer";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext";
 import AddItemModal from "../AddItemModal/AddItemModal";
+import { getItems, addItem, deleteCard } from "../../utils/api";
 
 function App() {
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState('F')
@@ -68,6 +69,16 @@ function App() {
   }, []);
 
   console.log(currentTemperatureUnit)
+
+  useEffect(() => {
+    getItems()
+      .then((data) => {
+        console.log(data);
+        // set the clothing items
+        setClothingItems(data);
+      })
+      .catch(console.error);
+  }, []);
   
   return (
     <div className="page">
