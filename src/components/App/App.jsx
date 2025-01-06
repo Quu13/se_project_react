@@ -51,7 +51,7 @@ function App() {
   const handleOpenDelete = (cardId) => {
     deleteCard(cardId)
       .then(() => {
-        setClothingItems(clothingItems.filter((item) => item._id !== id));
+        setClothingItems(clothingItems.filter((item) => item._id !==selectedCard._id));
         closeModal();
       })
       .catch((error) => console.log(error));
