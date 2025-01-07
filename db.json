@@ -1,30 +1,6 @@
 {
   "items": [
     {
-      "_id": 0,
-      "name": "Beanie",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Beanie.png?etag=bc10497cc80fa557f036e94f9999f7b2"
-    },
-    {
-      "_id": 2,
-      "name": "Cap",
-      "weather": "hot",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Cap.png?etag=f3dad389b22909cafa73cff9f9a3d591"
-    },
-    {
-      "_id": 4,
-      "name": "Dress",
-      "weather": "hot",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Dress.png?etag=1f9cd32a311ab139cab43494883720bf"
-    },
-    {
-      "_id": 6,
-      "name": "Jacket",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Jacket.png?etag=f4bb188deaa25ac84ce2338be2d404ad"
-    },
-    {
       "_id": 7,
       "name": "Jeans",
       "weather": "warm",
@@ -41,12 +17,6 @@
       "name": "Sandals",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sandals.png?etag=9bea85a77c0306586d2b71a33b626d41"
-    },
-    {
-      "_id": 10,
-      "name": "Scarf",
-      "weather": "cold",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Scarf.png?etag=74efbee93810c926b5507e862c6cb76c"
     },
     {
       "_id": 11,
@@ -83,6 +53,102 @@
       "name": "T-Shirt",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 17
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 18
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 19
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 20
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 21
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 22
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 23
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 24
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 25
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 26
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 27
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 28
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 29
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 30
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 31
+    },
+    {
+      "name": "tt",
+      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
+      "weather": "on",
+      "_id": 32
     }
   ]
 }

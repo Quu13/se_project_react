@@ -14,7 +14,6 @@ import AddItemModal from "../AddItemModal/AddItemModal";
 import { getItems, addItem, deleteCard } from "../../utils/api";
 
 function App() {
-  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState('F')
   const [weatherData, setWeatherData] = useState({
     type: "",
     temp: { F: 999 },
@@ -24,6 +23,7 @@ function App() {
   /*MODAL*/
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
+  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState('F')
   const [clothingItems, setClothingItems] = useState([]);
 
   const handleCardClick = (card) => {
@@ -43,18 +43,21 @@ function App() {
     addItem({ name, imageUrl, weather })
       .then((values) => {
         setClothingItems([values, ...clothingItems]);
-        closeModal();
+        closeActiveModal();
       })
       .catch((err) => console.log(err));
   };
 
   const handleOpenDelete = (cardId) => {
-    deleteCard(cardId)
-      .then(() => {
-        setClothingItems(clothingItems.filter((item) => item._id !==selectedCard._id));
-        closeModal();
+     deleteCard(selectedCard._id)
+      .then((data) => {
+        setClothingItems(
+          clothingItems.filter((item) => item._id !== selectedCard._id)
+        );
+        setSelectedCard({});
+        closeActiveModal();
       })
-      .catch((error) => console.log(error));
+      .catch(console.error);
   };
 
 
@@ -102,7 +105,8 @@ function App() {
           <Route 
           path="/profile" 
           element=
-          {<Profile  
+          {<Profile
+          handleAddClick={handleAddClick}  
           handleCardClick={handleCardClick}
           clothingItems={clothingItems}/> } />
         </Routes>
