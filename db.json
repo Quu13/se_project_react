@@ -58,24 +58,6 @@
       "name": "tt",
       "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
       "weather": "on",
-      "_id": 17
-    },
-    {
-      "name": "tt",
-      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
-      "weather": "on",
-      "_id": 18
-    },
-    {
-      "name": "tt",
-      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
-      "weather": "on",
-      "_id": 19
-    },
-    {
-      "name": "tt",
-      "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
-      "weather": "on",
       "_id": 20
     },
     {
@@ -149,6 +131,12 @@
       "imageUrl": "https://www.figma.com/design/F03bTb81Pw8IDPj5Y9rc5i/Sprint-10-%7C-WTWR?node-id=311-433&p=f&t=rhRvYQhAOqX4WpMS-0",
       "weather": "on",
       "_id": 32
+    },
+    {
+      "name": "",
+      "imageUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FPikminTM-Nintendo-Switch-US-Version%2Fdp%2FB0C8VL3657&psig=AOvVaw0HUQOJuJYWKA9Sw6TSPPEH&ust=1736297034048000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKD9w9Gw4ooDFQAAAAAdAAAAABAE",
+      "weather": "hot",
+      "_id": 33
     }
   ]
 }
