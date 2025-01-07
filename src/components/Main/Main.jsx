@@ -12,7 +12,7 @@ function Main({ weatherData, handleCardClick, clothingItems }) {
       <WeatherCard weatherData={weatherData} />
       <section className="main__cards">
         <p className="main__cards-text">
-          Today is {Math.round(weatherData.temp[currentTemperatureUnit])} &deg;
+        Today is {weatherData.temp[currentTemperatureUnit]}&deg;{" "}
           {currentTemperatureUnit} / You may want to wear:
         </p>
         <ul className="main__cards-list">

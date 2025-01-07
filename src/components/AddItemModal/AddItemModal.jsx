@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-const AddItemModal = ({ onClose, onAddItem, isOpen }) => {
+const AddItemModal = ({ closeActiveModal, onClose, onAddItem, isOpen }) => {
   const [name, setName] = useState("");
   const handleNameChange = (e) => {
     console.log(e.target.value);
@@ -19,8 +19,6 @@ const AddItemModal = ({ onClose, onAddItem, isOpen }) => {
     console.log(e.target.value);
     setWeather(e.target.value);
   };
-
-  
 
   useEffect(() => {
     if (isOpen) {
