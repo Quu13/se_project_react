@@ -24,4 +24,4 @@ function addItem({ name, imageUrl, weather }) {
     }).then(checkRes);
   }
 
-export { getItems, addItem, deleteCard };
+export { checkRes, getItems, addItem, deleteCard };

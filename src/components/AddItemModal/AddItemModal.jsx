@@ -48,6 +48,10 @@ const AddItemModal = ({ closeActiveModal, onClose, onAddItem, isOpen }) => {
           className="modal__input"
           id="name"
           placeholder="Name"
+          name="name"
+          minLength="1"
+          maxLength="30"
+          value={name}
           onChange={handleNameChange}
         />
       </label>
@@ -58,6 +62,8 @@ const AddItemModal = ({ closeActiveModal, onClose, onAddItem, isOpen }) => {
           className="modal__input"
           id="imageUrl"
           placeholder="Image URL"
+          name="link"
+          value={imageUrl}
           onChange={handleImgUrlChange}
         />
       </label>

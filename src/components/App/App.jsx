@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -23,7 +23,7 @@ function App() {
   /*MODAL*/
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
-  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState('F')
+  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [clothingItems, setClothingItems] = useState([]);
 
   const handleCardClick = (card) => {
@@ -49,7 +49,7 @@ function App() {
   };
 
   const handleOpenDelete = (cardId) => {
-     deleteCard(selectedCard._id)
+    deleteCard(selectedCard._id)
       .then((data) => {
         setClothingItems(
           clothingItems.filter((item) => item._id !== selectedCard._id)
@@ -60,11 +60,10 @@ function App() {
       .catch(console.error);
   };
 
-
-  const handleToggleSwitchChange =() =>{
-    if (currentTemperatureUnit === 'C')setCurrentTemperatureUnit('F')
-    if (currentTemperatureUnit === 'F')setCurrentTemperatureUnit('C')  
-  }
+  const handleToggleSwitchChange = () => {
+    if (currentTemperatureUnit === "C") setCurrentTemperatureUnit("F");
+    if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
+  };
 
   useEffect(() => {
     getWeather(coordinates, APIkey)
@@ -75,7 +74,7 @@ function App() {
       .catch(console.error);
   }, []);
 
-  console.log(currentTemperatureUnit)
+  console.log(currentTemperatureUnit);
 
   useEffect(() => {
     getItems()
@@ -85,44 +84,51 @@ function App() {
       })
       .catch(console.error);
   }, []);
-  
+
   return (
     <div className="page">
-       <CurrentTemperatureUnitContext.Provider value={{currentTemperatureUnit, handleToggleSwitchChange}}>
-      <div className="page__content">
-        <Header handleAddClick={handleAddClick} weatherData={weatherData} />
+      <CurrentTemperatureUnitContext.Provider
+        value={{ currentTemperatureUnit, handleToggleSwitchChange }}
+      >
+        <div className="page__content">
+          <Header handleAddClick={handleAddClick} weatherData={weatherData} />
 
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Main
+                  weatherData={weatherData}
+                  handleCardClick={handleCardClick}
+                  clothingItems={clothingItems}
+                />
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <Profile
+                  handleAddClick={handleAddClick}
+                  handleCardClick={handleCardClick}
+                  clothingItems={clothingItems}
+                />
+              }
+            />
+          </Routes>
 
-        <Routes>
-          <Route 
-          path="/" 
-          element={
-          <Main weatherData={weatherData}
-           handleCardClick={handleCardClick}
-           clothingItems={clothingItems} /> 
-        } 
-      />
-          <Route 
-          path="/profile" 
-          element=
-          {<Profile
-          handleAddClick={handleAddClick}  
-          handleCardClick={handleCardClick}
-          clothingItems={clothingItems}/> } />
-        </Routes>
-        
-        <Footer />
-      </div>
-     <AddItemModal
-     isOpen={activeModal  === "add-garment"}
-     onAddItem={handleAddItemSubmit}
-     onClose= {closeActiveModal} />
-      <ItemModal
-        activeModal={activeModal}
-        card={selectedCard}
-        onClose={closeActiveModal}
-        onOpenDelete={handleOpenDelete}
-      />
+          <Footer />
+        </div>
+        <AddItemModal
+          isOpen={activeModal === "add-garment"}
+          onAddItem={handleAddItemSubmit}
+          onClose={closeActiveModal}
+        />
+        <ItemModal
+          activeModal={activeModal}
+          card={selectedCard}
+          onClose={closeActiveModal}
+          onOpenDelete={handleOpenDelete}
+        />
       </CurrentTemperatureUnitContext.Provider>
     </div>
   );
