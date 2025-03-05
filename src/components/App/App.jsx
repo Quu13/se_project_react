@@ -12,6 +12,9 @@ import Footer from "../Footer/Footer";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext";
 import AddItemModal from "../AddItemModal/AddItemModal";
 import { getItems, addItem, deleteCard } from "../../utils/api";
+import RegisterModal from "../RegisterModal/RegisterModal";
+import LoginModal from "../LoginModal/LoginModal";
+import CurrentUserContext from "../../contexts/CurrentUserContext";
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -86,6 +89,9 @@ function App() {
   }, []);
 
   return (
+    <CurrentUserContext.Provider
+    value={{ currentUser: user, clothingItems, isLoggedIn }}>
+      
     <div className="page">
       <CurrentTemperatureUnitContext.Provider
         value={{ currentTemperatureUnit, handleToggleSwitchChange }}
@@ -115,7 +121,6 @@ function App() {
               }
             />
           </Routes>
-
           <Footer />
         </div>
         <AddItemModal
@@ -129,8 +134,21 @@ function App() {
           onClose={closeActiveModal}
           onOpenDelete={handleOpenDelete}
         />
+        <RegisterModal
+        activeModal={activeModal}
+        onClose={onClose}
+        handleRegisterSubmit={handleRegisterClick}
+        handleLoginClick={handleLoginClick}
+        />
+        <LoginModal
+        activeModal={activeModal}
+        onClose={onClose}
+        handleLoginSubmit={handleLoginSubmit}
+        handleRegisterClick={handleRegisterClick}
+        />
       </CurrentTemperatureUnitContext.Provider>
     </div>
+    </CurrentUserContext.Provider>
   );
 }
 
