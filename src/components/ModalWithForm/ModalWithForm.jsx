@@ -3,27 +3,36 @@ import "./ModalWithForm.css";
 function ModalWithForm({
   children,
   buttonText,
-  title,
-  isOpen,
+  buttonTextTwo,
+  titleText,
   onClose,
+  isOpen,
   onSubmit,
+  toggleLoginRegister,
 }) {
   return (
     <div className={`modal ${isOpen && "modal_opened"}`}>
       <div className="modal__content">
-        <h2 className="modal__title">{title}</h2>
-        <form className="modal__form" action="" onSubmit={onSubmit}>
-          {children}
-
+        <form className="modal_form" onSubmit={onSubmit}>
+          <h2 className="modal__title">{titleText}</h2>
           <button
-            onClick={onClose}
-            type="button"
             className="modal__close"
+            type="button"
+            onClick={onClose}
           ></button>
-
-          <button type="submit" className="modal__submit">
-            {buttonText}
-          </button>
+          {children}
+          <div>
+            <button className="modal__submit" type="submit">
+              {buttonText}
+            </button>
+            <button
+              className="modal__button-login"
+              type="button"
+              onClick={toggleLoginRegister}
+            >
+              {buttonTextTwo}
+            </button>
+          </div>
         </form>
       </div>
     </div>

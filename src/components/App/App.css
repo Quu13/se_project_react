@@ -2,15 +2,11 @@
 background-color: #f3f3f3;
 }
 
-.page__content{
-  box-sizing: border-box;
+.page__content {
+  max-width: 1360px;
   margin: 0 auto;
-  padding: 32px 40px 24px;
-  width: 100%;
-  max-width: 1440px;
+  padding: 20px;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 

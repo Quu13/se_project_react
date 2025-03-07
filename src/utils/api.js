@@ -1,27 +1,82 @@
-const baseUrl = 'http://localhost:3001';
+import { BASE_URL } from "./constants";
 
-function checkRes(res) {
-    return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
+export function checkResponse(res) {
+  if (res.ok) {
+    return res.json();
+  } else {
+    return Promise.reject(`Error ${res.status}`);
   }
-
-function getItems() {
-    return fetch(`${baseUrl}/items`).then(checkRes);
 }
 
-function addItem({ name, imageUrl, weather }) {
-    return fetch(`${baseUrl}/items`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-      body: JSON.stringify({ name, imageUrl, weather }),
-    }).then(checkRes);
-  }
-  
-  function deleteCard(cardId) {
-    return fetch(`${baseUrl}/items/${cardId}`, {
-      method: "DELETE",
-    }).then(checkRes);
-  }
+const authorization = () => {
+  return {
+    "Content-Type": "application/json",
+    authorization: `Bearer ${localStorage.getItem("jwt")}`,
+  };
+};
 
-export { checkRes, getItems, addItem, deleteCard };
+const getItems = () => {
+  return fetch(`${BASE_URL}/items`, {
+    method: "GET",
+    headers: authorization(),
+  }).then(checkResponse);
+};
+
+const addItems = ({ name, weather, imageUrl }) => {
+  return fetch(`${BASE_URL}/items`, {
+    method: "POST",
+    headers: authorization(),
+    body: JSON.stringify({
+      name,
+      weather,
+      imageUrl,
+    }),
+  }).then(checkResponse);
+};
+
+const deleteItem = (id) => {
+  return fetch(`${BASE_URL}/items/${id}`, {
+    method: "DELETE",
+    headers: authorization(),
+  }).then(checkResponse);
+};
+
+const profileEdited = (name, avatar, _id, token) => {
+  return fetch(`${BASE_URL}/users/me`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify({ name, avatar, _id }),
+  }).then(checkResponse);
+};
+
+const addCardLike = (id, token) => {
+  return fetch(`${BASE_URL}/items/${id}/likes`, {
+    method: "PUT",
+    headers: {
+      authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+  }).then(checkResponse);
+};
+
+const removeCardLike = (id, token) => {
+  return fetch(`${BASE_URL}/items/${id}/likes`, {
+    method: "DELETE",
+    headers: {
+      authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+    },
+  }).then(checkResponse);
+};
+
+export const api = {
+  getItems,
+  addItems,
+  deleteItem,
+  profileEdited,
+  addCardLike,
+  removeCardLike,
+};

@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
+import { coordinates, APIkey } from "../../utils/constants";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import ItemModal from "../ItemModal/ItemModal";
 import Profile from "../Profile/Profile";
-import { coordinates, APIkey } from "../../utils/constants";
+import { api } from "../../utils/api";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
+import * as auth from "../../utils/auth";
 import Footer from "../Footer/Footer";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext";
 import AddItemModal from "../AddItemModal/AddItemModal";
-import { getItems, addItem, deleteCard } from "../../utils/api";
 import RegisterModal from "../Register/RegisterModal";
 import LoginModal from "../Login/LoginModal";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
@@ -89,7 +89,7 @@ function App() {
   };
 
   //REGISTRATION
-  const handleRegisterSubmit = ({ email, password, name, avatar }) => {
+  const handleRegistrationSubmit = ({ email, password, name, avatar }) => {
     console.log("Submitting registration with:", {
       email,
       password,
