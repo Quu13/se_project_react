@@ -20,8 +20,6 @@ function WeatherCard({ weatherData }) {
     weatherOption = filteredOptions[0];
   }
 
-  const temperature = weatherData.temp[currentTemperatureUnit];
-
   return (
     <section className="weather__card">
       <p className="weather__card-temp">
