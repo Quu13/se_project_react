@@ -239,7 +239,17 @@ function App() {
     } else {
       return;
     }
-  }, []);
+ 
+
+  useEffect(() => {
+    getItems()
+      .then((data) => {
+        console.log(data);
+        setClothingItems(data)
+      })
+    .catch(console.error);
+  })
+}, []);
 
   return (
     <CurrentUserContext.Provider
