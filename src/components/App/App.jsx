@@ -213,11 +213,20 @@ function App() {
   const [updateDom, setUpdateDom] = useState(false);
 
   //USE-EFFECT/API
-  useEffect(() => {
+   useEffect(() => {
     getWeather(coordinates, APIkey)
       .then((data) => {
         const filteredData = filterWeatherData(data);
         setWeatherData(filteredData);
+      })
+      .catch(console.error);
+  }, []);
+
+  useEffect(() => {
+    api
+      .getItems()
+      .then((data) => {
+        setClothingItems(data);
       })
       .catch(console.error);
   }, []);
@@ -239,17 +248,8 @@ function App() {
     } else {
       return;
     }
- 
+  }, []);
 
-  useEffect(() => {
-    getItems()
-      .then((data) => {
-        console.log(data);
-        setClothingItems(data)
-      })
-    .catch(console.error);
-  })
-}, []);
 
   return (
     <CurrentUserContext.Provider
@@ -313,7 +313,7 @@ function App() {
           <RegisterModal
             activeModal={activeModal}
             onClose={closeActiveModal}
-            handleRegisterSubmit={handleRegisterClick}
+            handleRegistrationSubmit={handleRegistrationSubmit}
             handleLoginClick={handleLoginClick}
           />
           <LoginModal
