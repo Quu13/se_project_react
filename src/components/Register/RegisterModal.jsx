@@ -2,7 +2,6 @@ import { React, useState, useEffect } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useForm } from "../../Hooks/hooks";
 
-
 function RegisterModal({
   activeModal,
   onClose,
