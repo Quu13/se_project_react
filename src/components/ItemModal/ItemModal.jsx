@@ -26,12 +26,14 @@ function ItemModal({ activeModal, onClose, card, onOpenDelete }) {
             <h2 className="modal__caption">{card.name}</h2>
             <p className="modal__weather">Weather: {card.weather}</p>
           </div>
-          <button
-            onClick={onOpenDelete}
-            className={`modal__button-delete ${itemDeleteButtonClassName}`}
-          >
-            Delete Item
-          </button>
+          {currentUser && currentUser._id === card?.owner && (
+            <button
+              onClick={onOpenDelete}
+              className={`modal__button-delete ${itemDeleteButtonClassName}`}
+            >
+              Delete Item
+            </button>
+          )}
         </div>
       </div>
     </div>
