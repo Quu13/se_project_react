@@ -3,7 +3,7 @@ import "./DeleteModal.css";
 function DeleteModal({
   activeModal,
   handleDeleteConfirmation,
-  closeActiveModal,
+  onClose,
 }) {
   return (
     <div
@@ -14,7 +14,7 @@ function DeleteModal({
           <button
             className="delete__close-btn"
             type="button"
-            onClick={closeActiveModal}
+            onClick={onClose}
           ></button>
           <div className="delete__text">
             <p className="delete__title">
@@ -28,7 +28,7 @@ function DeleteModal({
           >
             Yes, delete item
           </button>
-          <button className="delete__cancel-btn" onClick={closeActiveModal}>
+          <button className="delete__cancel-btn" onClick={onClose}>
             Cancel
           </button>
         </div>
