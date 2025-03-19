@@ -13,6 +13,7 @@
   position: absolute;
   display: flex;
   top: 10px;
+  align-items: center;
 }
 
 .card__name {
@@ -26,6 +27,7 @@
   text-align: center;
   padding: 2px 12px;
   border-radius: 4px;
+  gap: 10px;
   margin: 0;
   font-family: "CabinetGrotesk-Medium", Arial, sans-serif;
 }
@@ -38,6 +40,10 @@
   border: none;
   width: 20px;
   height: 20px;
+}
+
+.card__like-btn_is-liked {
+  background-image: url(../../assets/like-button-dark.svg);
 }
 
 .card__image {
