@@ -66,7 +66,7 @@ function App() {
       .deleteItem(card._id)
       .then(() => {
         setClothingItems(clothingItems.filter((c) => c._id !== card._id));
-        closeModal();
+        closeActiveModal();
       })
       .catch((err) => console.elog(err));
   };
@@ -196,7 +196,6 @@ function App() {
     setActiveModal("register");
   };
 
-
   const handleLoginClick = () => {
     setActiveModal("login");
   };
@@ -213,13 +212,19 @@ function App() {
   const [updateDom, setUpdateDom] = useState(false);
 
   //USE-EFFECT/API
-   useEffect(() => {
+  useEffect(() => {
     getWeather(coordinates, APIkey)
       .then((data) => {
         const filteredData = filterWeatherData(data);
-        setWeatherData(filteredData);
+        if (filteredData) {
+          setWeatherData(filteredData);
+        } else {
+          console.error("Filtered data is undefined.");
+        }
       })
-      .catch(console.error);
+      .catch((error) => {
+        console.error("Error fetching weather data:", error);
+      });
   }, []);
 
   useEffect(() => {
@@ -234,9 +239,9 @@ function App() {
   const handleAddItemSubmit = (item) => {
     api
       .addItems(item)
-      .then((item) => {
-        setClothingItems([item.data, ...clothingItems]);
-        closeModal();
+      .then((createdItem) => {
+        setClothingItems([createdItem, ...clothingItems]);
+        closeActiveModal();
       })
       .catch((err) => console.log(err));
   };
@@ -300,7 +305,7 @@ function App() {
             <Footer />
           </div>
           <AddItemModal
-            activeModal={activeModal}
+            isOpen={activeModal === "add-garment"}
             onAddItem={handleAddItemSubmit}
             onClose={closeActiveModal}
           />
