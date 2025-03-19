@@ -1,10 +1,15 @@
-import "./DeleteModal.css"
+import "./DeleteModal.css";
 
-function DeleteModal({ activeModal, handleDeleteConfirmation, closeActiveModal }) {
-    return (
-      <div
-        className={`modal ${activeModal === "delete-modal" && "modal_opened"}`}
-      >
+function DeleteModal({
+  activeModal,
+  handleDeleteConfirmation,
+  closeActiveModal,
+}) {
+  return (
+    <div
+      className={`modal ${activeModal === "delete-modal" && "modal_opened"}`}
+    >
+      <div className="modal__content">
         <div className="delete__confirmation">
           <button
             className="delete__close-btn"
@@ -28,7 +33,8 @@ function DeleteModal({ activeModal, handleDeleteConfirmation, closeActiveModal }
           </button>
         </div>
       </div>
-    );
-  }
-  
-  export default DeleteModal;
+    </div>
+  );
+}
+
+export default DeleteModal;

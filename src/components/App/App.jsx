@@ -255,7 +255,6 @@ function App() {
     }
   }, []);
 
-
   return (
     <CurrentUserContext.Provider
       value={{ currentUser: user, clothingItems, isLoggedIn }}
@@ -313,7 +312,7 @@ function App() {
             activeModal={activeModal}
             card={selectedCard}
             onClose={closeActiveModal}
-            handleDeleteClick={handleDeleteClick}
+            onOpenDelete={handleDeleteClick}
           />
           <RegisterModal
             activeModal={activeModal}
