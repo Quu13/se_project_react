@@ -1,62 +1,64 @@
 @font-face {
-    font-family: "Cabinet Grotesk";
-    src: url(../../../vendor/fonts/cabinet-grotesk/CabinetGrotesk-Medium.otf)
-      format("woff");
-  }
-  
-  .modal-delete__confirmation {
-    position: relative;
-    width: 670px;
-    height: 280px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .modal-delete__close-btn {
-    height: 20px;
-    width: 20px;
-    background-image: url(../../assets/modalClose.svg);
-    border: none;
-    background-color: transparent;
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    background-repeat: no-repeat;
-  }
-  
-  .modal-delete__text {
-    margin: 60px 0 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .modal-delete__title {
-    margin: 0;
-    font-weight: 700;
-    line-height: 24px;
-    font-family: "Cabinet Grotesk", sans-serif;
-  }
-  
-  .modal-delete__confirm-btn {
-    padding: 0;
-    width: 138px;
-    height: 24px;
-    border: none;
-    background-color: #ffffff;
-    margin-bottom: 24px;
-    color: #ff3d00;
-    font-family: "Cabinet Grotesk", sans-serif;
-  }
-  
-  .modal-delete__cancel-btn {
-    padding: 0;
-    width: 138px;
-    height: 24px;
-    border: none;
-    background-color: #ffffff;
-    font-family: "Cabinet Grotesk", sans-serif;
-  }
+  font-family: "Cabinet Grotesk";
+  src: url(../../../vendor/fonts/cabinet-grotesk/CabinetGrotesk-Medium.otf)
+    format("woff");
+}
+
+.modal-delete__confirmation {
+  position: relative;
+  width: 670px;
+  height: 280px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-delete__close-btn {
+  height: 20px;
+  width: 20px;
+  background-image: url(../../assets/modalClose.svg);
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background-repeat: no-repeat;
+}
+
+.modal-delete__text {
+  margin: 60px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-delete__title {
+  margin: 0;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: "Cabinet Grotesk", sans-serif;
+}
+
+.modal-delete__confirm-btn {
+  padding: 0;
+  width: 138px;
+  height: 24px;
+  border: none;
+  background-color: #ffffff;
+  margin-bottom: 24px;
+  color: #ff3d00;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.modal-delete__cancel-btn {
+  padding: 0;
+  width: 138px;
+  height: 24px;
+  border: none;
+  background-color: #ffffff;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+}
