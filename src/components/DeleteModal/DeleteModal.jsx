@@ -9,31 +9,29 @@ function DeleteModal({
     <div
       className={`modal ${activeModal === "delete-modal" && "modal_opened"}`}
     >
-      <div className="modal__content">
-        <div className="delete__confirmation">
+        <div className="modal-delete__confirmation">
           <button
-            className="delete__close-btn"
+            className="modal-delete__close-btn"
             type="button"
             onClick={onClose}
           ></button>
-          <div className="delete__text">
-            <p className="delete__title">
+          <div className="modal-delete__text">
+            <p className="modal-delete__title">
               Are you sure you want to delele this item?
             </p>
-            <p className="delete__title">This action is irreversible.</p>
+            <p className="modal-delete__title">This action is irreversible.</p>
           </div>
           <button
-            className="delete__confirm-btn"
+            className="modal-delete__confirm-btn"
             onClick={handleDeleteConfirmation}
           >
             Yes, delete item
           </button>
-          <button className="delete__cancel-btn" onClick={onClose}>
+          <button className="modal-delete__cancel-btn" onClick={onClose}>
             Cancel
           </button>
         </div>
       </div>
-    </div>
   );
 }
 

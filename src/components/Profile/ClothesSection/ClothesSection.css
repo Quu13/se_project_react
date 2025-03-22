@@ -1,16 +1,16 @@
 .clothes-section {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+}
 
-.clothes-section__container{
-    display: flex;
+.clothes-section__container {
+  display: flex;
   margin-bottom: 16px;
   align-items: center;
 }
 
 .clothes-section__title {
-    margin: 0 20px 0 0;
+  margin: 0 20px 0 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 25px;
@@ -18,19 +18,21 @@
 }
 
 .clothes-section__add-btn {
-    border: none;
-    color: rgba(0, 0, 0, 0.6);
-    max-width: 88px;
-    max-height: 25px;
-    font-family: "Cabinet Grotesk", sans-serif;
+  border: none;
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 88px;
+  max-height: 25px;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .clothes-section__items {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1015px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1015px;
 }

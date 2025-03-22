@@ -1,4 +1,18 @@
-.profile {
+@font-face {
+    font-family: "Cabinet Grotesk";
+    src: url(../../../vendor/fonts/cabinet-grotesk/CabinetGrotesk-Medium.otf)
+      format("woff");
+  }
+  
+  .profile {
     display: flex;
+    justify-content: space-between;
+    padding-top: 19px;
     gap: 116px;
-}
+  }
+  
+  .profile__sidebar {
+    display: flex;
+  }
+  
+  
