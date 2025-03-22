@@ -41,7 +41,7 @@
     font-family: "CabinetGrotesk-Medium", Arial, sans-serif;
   }
 
-  .modal__item-delete-btn {
+  .modal__button-delete {
     position: relative;
     top: -56px;
     left: 333px;
