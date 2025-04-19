@@ -3,11 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://weatherwars.twilightparadox.com",
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy":" npm run build && scp -r ./dist/* Benicensoto@weatherwars.twilightparadox.com:/home/Benicensoto/frontend"
+
   },
   "dependencies": {
     "react": "^18.3.1",

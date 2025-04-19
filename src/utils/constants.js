@@ -119,5 +119,5 @@ export const weatherOptions = [
 
   export const BASE_URL =
   process.env.NODE_ENV === "production"
-    ? "https://api.wtwr-project.happyforever.com"
+    ? "https://api.weatherwars.twilightparadox.com"
     : "http://localhost:3001";

@@ -1,4 +1,4 @@
-import { BASE_URL } from "./constants";
+import { BASE_URL } from "../utils/constants";
 
 export function checkResponse(res) {
   if (res.ok) {
