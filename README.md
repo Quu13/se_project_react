@@ -9,6 +9,14 @@ The idea of the application is pretty simple - we make a call to an API, which t
 ## Link to Domain
 (www.weatherwars.twilightparadox.com)
 
+## Link to Backend 
+
+https://api.weatherwars.twilightparadox.com
+
+## Link to Frontend
+https://weatherwars.twilightparadox.com
+
+
 ## Link to Backend Repo
 (https://github.com/Quu13/se_project_express.git)
 
